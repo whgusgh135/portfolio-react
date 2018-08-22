@@ -1,0 +1,24 @@
+.about {
+    width: 100%;
+    height: 100%;
+    padding-left: 7rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    &__text-box {
+        margin-left: 8rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+    }
+
+    &__feature-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: stretch;
+    }
+}

@@ -1,0 +1,71 @@
+.work-box {
+    width: 100%;
+    display: flex;
+
+    &__big-item-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 2rem;
+    }
+
+    &__small-item-grid {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-gap: 1rem;
+    }
+    
+    &__big-item {
+        border: 1px var(--color-primary) solid;
+        border-radius: 3px;
+        background-color: $color-grey-dark-1;
+        position: relative;
+
+        &:hover .work-box__description-box {
+            background-color: $color-white;
+            display: block;
+        }
+    }
+
+    &__small-item {
+        transition: .3s transform linear;
+        border: 1px var(--color-primary) solid;
+        border-radius: 3px;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    &__picture {
+        height: 12rem;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__description--heading {
+        font-size: 1.4rem;
+        color: $color-white;
+        padding: .5rem .5rem;
+    }
+
+    &__description--paragraph {
+        font-size: 1.2rem;
+        color: $color-white;
+        padding: .5rem .5rem
+    }
+
+    &__description-box {
+        position: absolute;
+        top: 0;
+        left: 92%;
+        z-index: 3;
+        width: 25rem;
+        padding: 1.4rem;
+        padding-left: 15%;
+        color: $color-black;
+        background-color: $color-white;
+        box-shadow: 50px 100px $color-black;
+        display: none;
+        -webkit-clip-path: polygon(5% 0, 100% 0, 100% 100%, 5% 100%, 5% 14%, 0 7%);
+        clip-path: polygon(5% 0, 100% 0, 100% 100%, 5% 100%, 5% 14%, 0 7%);
+    }
+}

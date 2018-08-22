@@ -1,0 +1,25 @@
+.feature-box {
+
+    &__container {
+        border: 1px var(--color-primary) solid;
+        border-radius: 3px;
+        background-color: $color-grey-dark-1;
+        margin: 1rem 2rem;
+    }
+
+    &__heading {
+        text-transform: uppercase;
+        letter-spacing: .5rem;
+        font-size: 1.6rem;
+        padding: 1rem 2rem;
+        color: var(--color-primary);
+    }
+
+    &__list-box {
+        padding: 1rem 2rem;
+    }
+    &__list {
+        list-style: none;
+        color: $color-white;
+    }
+}

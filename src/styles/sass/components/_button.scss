@@ -1,0 +1,36 @@
+.btn {
+    background-color: $color-grey-dark-1;
+    color: $color-white;
+    border: none;
+    cursor: pointer;
+
+    &-primary {
+        border: 1px var(--color-primary) solid;
+        border-radius: 3px;
+        color: var(--color-primary);
+        text-transform: uppercase;
+        letter-spacing: .3rem;
+        font-size: 1.2rem;
+        padding: .5rem 1rem;
+
+        &:hover {
+            background-color: var(--color-primary);
+            color: $color-grey-light-1;
+        }
+    }
+
+    &-secondary {
+        border: 1px var(--color-secondary) solid;
+        border-radius: 3px;
+        color: var(--color-secondary);
+        text-transform: uppercase;
+        letter-spacing: .3rem;
+        font-size: 1.2rem;
+        padding: .5rem 1rem;
+
+        &:hover {
+            background-color: var(--color-secondary);
+            color: $color-grey-light-1;
+        }
+    }
+}

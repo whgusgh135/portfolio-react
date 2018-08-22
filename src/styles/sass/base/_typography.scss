@@ -1,0 +1,52 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: $color-grey-light-1;
+}
+
+// h1, h2, h3, h4, h5, h6, p {
+//     background-color: $color-grey-dark-1;
+// }
+
+.heading-primary {
+    color: $color-white;
+    font-size: 5rem;
+}
+
+.heading-secondary {
+    color: var(--color-primary);
+    font-size: 4rem;
+}
+
+.heading-tertiary {
+    color: var(--color-secondary);
+    font-size: 4rem;
+}
+
+.highlight-primary {
+    color: var(--color-primary);
+}
+
+.highlight-secondary {
+    color: var(--color-secondary);
+}
+
+.highlight-grey {
+    color: $color-grey-light-2;
+    font-size: 1.4rem;
+}
+
+.paragraph-primary {
+    color: $color-grey-light-2;
+    font-size: 1.4rem;
+}
+
+.paragraph-secondary {
+    color: $color-white;
+}
+
+.link-primary {
+    text-decoration: none;
+    color: var(--color-primary);
+}
