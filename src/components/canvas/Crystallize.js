@@ -1,9 +1,6 @@
 import React from "react";
 
 export class Crystallize extends React.Component {
-    constructor(props) {
-        super(props);
-    }
 
 	componentDidMount() {
         const canvas = this.refs.canvas;
@@ -30,6 +27,12 @@ export class Crystallize extends React.Component {
         window.addEventListener("mousemove", function(e) {
             mouse.x = e.clientX;	
             mouse.y = e.clientY;	
+        });
+
+        // add touch listener
+        window.addEventListener("touchmove", function(e) {
+            mouse.x = e.touches[0].clientX;
+            mouse.y = e.touches[0].clientY;
         });
 
         // define color types of particles

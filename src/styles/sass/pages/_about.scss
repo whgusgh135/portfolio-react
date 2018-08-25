@@ -6,13 +6,31 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
 
-    &__text-box {
-        margin-left: 8rem;
+    @include respond(tab-port) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
 
+    &__text-box {
         display: flex;
-        flex-direction: column;
         justify-content: center;
-        align-items: start;
+        align-items: center;
+        animation: .8s moveInRight ease-out;
+
+        @include respond(tab-port) {
+            justify-content: start;
+            margin-left: 12rem;
+        }
+        @include respond(phone) {
+            margin-left: 6rem;
+        }
+
+        & div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+        }
     }
 
     &__feature-box {
@@ -20,5 +38,22 @@
         flex-direction: column;
         justify-content: center;
         align-self: stretch;
+        margin-right: 10rem;
+
+        @include respond(tab-land) {
+            margin-right: 0;
+        }
+        @include respond(tab-port) {
+            margin-right: 10rem;
+            margin-left: 10rem;
+        }
+        @include respond(phone) {
+            margin-right: 4rem;
+            margin-left: 4rem;
+        }
+        @include respond(big-desktop) {
+            margin-right: 15rem;
+        }
+        
     }
 }

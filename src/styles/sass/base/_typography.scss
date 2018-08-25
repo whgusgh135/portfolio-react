@@ -5,9 +5,9 @@ body {
     color: $color-grey-light-1;
 }
 
-// h1, h2, h3, h4, h5, h6, p {
-//     background-color: $color-grey-dark-1;
-// }
+h1, h2, h3, h4, h5, h6, p {
+    background-color: $color-grey-dark-1;
+}
 
 .heading-primary {
     color: $color-white;
@@ -49,4 +49,13 @@ body {
 .link-primary {
     text-decoration: none;
     color: var(--color-primary);
+
+    &:visited {
+        color: var(--color-secondary);
+    }
+}
+
+.link-secondary {
+    text-decoration: none;
+    color: var(--color-secondary);
 }

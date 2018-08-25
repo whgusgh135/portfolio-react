@@ -8,10 +8,32 @@
 
 html {
     font-size: 62.5%;
+
+    @include respond(tab-port) {
+        font-size: 56.25%; // 1 rem = 9px
+    }
+
+    @include respond(phone) {
+        font-size: 50%; // 1 rem = 8px
+    }
+    
+    @include respond(big-desktop) {
+        font-size: 75%; // 1 rem = 12px
+    }
 }
 
 body {
     box-sizing: border-box;
     height: 100vh;
     width: 100vw;
+}
+
+::selection {
+    background-color: var(--color-primary);
+    color: $color-white;
+}
+
+input:-webkit-autofill {
+  -webkit-text-fill-color: $color-grey-light-2;
+  -webkit-box-shadow: 0 0 0px 1000px $color-grey-dark-3 inset;
 }

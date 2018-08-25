@@ -13,7 +13,15 @@
     &__section {
         display: flex;
         flex-direction: column;
-        margin-bottom: 3rem;
+
+        &:last-child {
+            margin-bottom: 3rem;
+            margin-top: 3rem;
+        }
+    }
+
+    &__text {
+        background-color: $color-grey-dark-2;
     }
 
     &__item {
@@ -23,6 +31,7 @@
         transform: translateX(-50%) translateY(50%);
         width: max-content;
         width: -moz-max-content;
+        background-color: $color-grey-dark-2;
 
         opacity: 0;
         transition: .3s all .1s;
@@ -35,7 +44,7 @@
     &__link {
         position: relative;
         text-decoration: none;
-        color: $color-grey-light-2; 
+        color: $color-grey-light-2;
         margin-top: 2rem;
         margin-bottom: 2rem;
 
@@ -62,6 +71,10 @@
             height: 2rem;
             width: 2rem;
             transform: translateX(-50%) translateY(25%);
+        }
+
+        &--active {
+            fill: var(--color-primary);
         }
     }
 }

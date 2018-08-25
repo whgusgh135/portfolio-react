@@ -3,6 +3,23 @@
     height: 100%;
     padding-left: 7rem;
 
-    padding-top: 15rem;
-    padding-left: 8rem;
+    display: flex;
+    justify-content: center;
+    
+    animation: .8s moveInRight ease-out;
+
+    &__info {
+        margin-left: 8rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__email-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 7rem 7rem;
+    }
 }

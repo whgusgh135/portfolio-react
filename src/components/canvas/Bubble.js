@@ -1,6 +1,6 @@
 import React from "react";
 
-export class ParticleSurge extends React.Component {
+export class Bubble extends React.Component {
 
 	componentDidMount() {
         const canvas = this.refs.canvas;
@@ -45,11 +45,11 @@ export class ParticleSurge extends React.Component {
         // define particle class
         class Particle{
             constructor(x, y, dx, dy, r) {
-                this.x = x;
-                this.y = y;
+                this.x = x + Math.random() * 50 - 25;
+                this.y = y + Math.random() * 50 - 25;
                 this.dx = dx;
                 this.dy = dy;
-                this.r = r;
+                this.r = Math.random() * r;
                 this.opacity = 1;
                 this.shouldRemove = false;
                 this.randomColor = Math.floor(Math.random() * colors.length);
@@ -59,6 +59,7 @@ export class ParticleSurge extends React.Component {
                 this.x += this.dx;
                 this.y += this.dy;
 
+                // particles bounce off the canvas boundaries and move into opposite direction
                 if (this.x + this.r >= canvas.width || this.x - this.r <= 0) {
                     this.dx = -this.dx
                 }
@@ -71,11 +72,13 @@ export class ParticleSurge extends React.Component {
                 this.x = Math.min(Math.max(this.x, 0 + this.r), canvas.width - this.r);
                 this.y = Math.min(Math.max(this.y, 0 + this.r), canvas.height - this.r);
 
-                this.r -= 0.2;
+                
                 this.opacity -= 0.007;
+                
+                
 
-                if (this.r < 0) {
-                    this.r = 0;
+                if (this.opacity < 0) {
+                    this.opacity = 0;
                     this.shouldRemove = true;
                 }
 
@@ -95,6 +98,7 @@ export class ParticleSurge extends React.Component {
                     "," + colors[this.randomColor].g + ","  
                     + colors[this.randomColor].b + "," + 
                     this.opacity + ")";
+                c.fill();
                 c.stroke();
                 c.closePath();
             }
@@ -103,6 +107,7 @@ export class ParticleSurge extends React.Component {
 
 
         let particle = [];
+        let frame = true;
 
         const animate = () => {
             window.requestAnimationFrame(animate);
@@ -110,7 +115,13 @@ export class ParticleSurge extends React.Component {
             c.fillStyle = "#1e1e1e";
             c.fillRect(0, 0, canvas.width, canvas.height);
 
+            if(frame){
             particle.push(new Particle(mouse.x, mouse.y, Math.random() * 2 - 1, Math.random() * 2 - 1, 30));
+                frame = false;	
+            } else {
+                frame = true;
+            }
+
             for (var i = 0; i < particle.length; i++) {
                 if(particle[i].shouldRemove) {
                     particle.splice(i, 1);

@@ -1,17 +1,55 @@
 .work-box {
     width: 100%;
-    display: flex;
+
+    &__heading {
+
+        &--1 {
+            opacity: 0;
+            animation: 1s bounceTop cubic-bezier(0.175, 0.885, 0.32, 1.275) .5s forwards;
+        }
+        &--2 {
+            animation: 2.2s bounceTopDelay cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+    }
 
     &__big-item-grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
         grid-gap: 2rem;
+
+        opacity: 0;
+        animation: 1s bounceTop cubic-bezier(0.175, 0.885, 0.32, 1.275) .8s forwards;
+
+        @include respond(tab-port) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @include respond(phone) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr 1fr;
+        }
     }
 
     &__small-item-grid {
         display: grid;
-        grid-template-columns: repeat(10, 1fr);
+        grid-template-columns: repeat(8, 1fr);
         grid-gap: 1rem;
+
+        opacity: 1;
+        animation: 3s bounceTopDelay cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+        @include respond(tab-land) {
+            grid-template-columns: repeat(6, 1fr);
+        }
+        @include respond(tab-port) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        @include respond(phone) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @include respond(big-desktop) {
+            grid-template-columns: repeat(10, 1fr);
+        }
     }
     
     &__big-item {
@@ -19,26 +57,38 @@
         border-radius: 3px;
         background-color: $color-grey-dark-1;
         position: relative;
+        transition: .3s all linear;
 
-        &:hover .work-box__description-box {
-            background-color: $color-white;
-            display: block;
-        }
-    }
-
-    &__small-item {
-        transition: .3s transform linear;
-        border: 1px var(--color-primary) solid;
-        border-radius: 3px;
         &:hover {
-            transform: scale(1.1);
+            border: 1px var(--color-secondary) solid;
+        }
+
+        &:hover .work-box__description-box--right,
+        &:hover .work-box__description-box--left {
+            background-color: $color-grey-dark-3;
+            display: block;
+            z-index: 3;
+            opacity: 0;
+            animation: 1s fadeIn cubic-bezier(0.175, 0.885, 0.32, 1.275) .3s forwards;
         }
     }
 
     &__picture {
         height: 12rem;
         width: 100%;
+    }
+
+    &__picture--small {
+        transition: .2s all linear;
+        height: 12rem;
+        width: 100%;
+        border: 1px var(--color-primary) solid;
+        border-radius: 3px;
         object-fit: cover;
+        &:hover {
+            transform: scale(1.05);
+            border: 1px var(--color-secondary) solid;
+        }
     }
 
     &__description--heading {
@@ -54,18 +104,59 @@
     }
 
     &__description-box {
-        position: absolute;
-        top: 0;
-        left: 92%;
-        z-index: 3;
-        width: 25rem;
-        padding: 1.4rem;
-        padding-left: 15%;
-        color: $color-black;
-        background-color: $color-white;
-        box-shadow: 50px 100px $color-black;
-        display: none;
-        -webkit-clip-path: polygon(5% 0, 100% 0, 100% 100%, 5% 100%, 5% 14%, 0 7%);
-        clip-path: polygon(5% 0, 100% 0, 100% 100%, 5% 100%, 5% 14%, 0 7%);
+
+        &--right {
+            position: absolute;
+            border-left: 14px var(--color-secondary) solid;
+            transform: translateY(-20%);
+            top: 0;
+            left: 92%;
+            z-index: 3;
+            width: 28rem;
+            padding: 1rem;
+            padding-left: 10%;
+            color: $color-white;
+            display: none;
+            -webkit-clip-path: polygon(5% 0, 100% 0, 100% 100%, 5% 100%, 5% 43%, 0 50%, 5% 57%);
+            clip-path: polygon(5% 0, 100% 0, 100% 100%, 5% 100%, 5% 43%, 0 50%, 5% 57%);
+
+            @include respond(tab-port) {
+                -webkit-clip-path: polygon(0% 0, 100% 0, 100% 100%, 0 100%);
+                clip-path: polygon(0% 0, 100% 0, 100% 100%, 0 100%);
+                border-left: none;
+                margin-top: 20rem;
+                width: 25rem;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        &--left {
+            position: absolute;
+            border-right: 14px var(--color-secondary) solid;
+            top: 0;
+            right: 92%;
+            z-index: 3;
+            width: 28rem;
+            padding: 1rem;
+            padding-left: 10%;
+            color: $color-black;
+            background-color: $color-white;
+            display: none;
+            -webkit-clip-path: polygon(0 0, 95% 0, 95% 43%, 100% 50%, 95% 57%, 95% 100%, 0 100%);
+            clip-path: polygon(0 0, 95% 0, 95% 43%, 100% 50%, 95% 57%, 95% 100%, 0 100%);
+        }
+    }
+
+    &__description-box-heading {
+        background-color: $color-grey-dark-3;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+
+    }
+
+    &__description-box-paragraph {
+        background-color: $color-grey-dark-3;
+        font-size: 1.4rem;
     }
 }

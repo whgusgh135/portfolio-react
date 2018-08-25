@@ -6,12 +6,24 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
 
-    &__text-box {
-        margin-left: 8rem;
+    @include respond(tab-port) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
 
+    &__text-box {
         display: flex;
-        flex-direction: column;
         justify-content: center;
+        align-items: center;
+        animation: .8s moveInRight ease-out;
+
+        & div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+        }
+        
     }
 
     &__button-box {
@@ -19,5 +31,25 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        
+
+        &--cursor {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            animation: 1s bounceTop cubic-bezier(0.175, 0.885, 0.32, 1.275) .7s forwards;
+        }
+        
+        &--color {
+            opacity: 0;
+            animation: 1s bounceTop cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.2s forwards;
+        }
+
+        @include respond(tab-port) {
+            margin-top: 5rem;
+            margin-bottom: 5rem;
+        }
     }
 }

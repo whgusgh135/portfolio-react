@@ -1,0 +1,17 @@
+.loading {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__icon {
+        border: 16px solid $color-grey-light-1;
+        border-top: 16px solid var(--color-primary);
+        border-radius: 50%;
+        width: 64px;
+        height: 64px;
+        animation: spin 1.5s linear infinite;
+        background-color: $color-grey-dark-1;
+    }
+}
