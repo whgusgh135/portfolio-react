@@ -3,7 +3,7 @@ const app = express();
 const path = require("path");
 
 const sgMail = require("@sendgrid/mail");
-sgMail.setApiKey("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");
+sgMail.setApiKey(process.env.EMAIL_KEY);
 
 const PORT = process.env.PORT || 3001;
 
