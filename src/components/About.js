@@ -17,14 +17,14 @@ export class About extends React.Component {
                         <p className="paragraph-secondary u-margin-top-small">2 years ago, I was a chemist.</p>
                         <p className="paragraph-secondary">But my interest in coding inspired me to</p>
                         <p className="paragraph-secondary">get a Computer Science degree</p>
-                        <p className="paragraph-secondary">and self-teach web developemnet!</p>
+                        <p className="paragraph-secondary">and learn web developemnet!</p>
     
                         <p className="paragraph-secondary u-margin-top-small">I mainly code in Javascript.</p>
                         <p className="paragraph-secondary">I am most comfortable developing a full stack app</p>
                         <p className="paragraph-secondary">using React-Redux, Node, Express, and MongoDB.</p>
     
-                        <p className="paragraph-secondary u-margin-top-small">I am also familiar with other languages</p>
-                        <p className="paragraph-secondary">since I love discovering new technology stack!</p>
+                        <p className="paragraph-secondary u-margin-top-small">I am also familiar with other languages.</p>
+                        <p className="paragraph-secondary">I love discovering new technology stack!</p>
     
                         <Link to="/work" className="btn btn-secondary u-margin-top-small u-margin-bottom-small">Find out more</Link>
                     </div>
@@ -40,7 +40,7 @@ export class About extends React.Component {
                                 Language - HTML, Javascript, ES6, Typescript, CSS, SASS
                             </li>
                             <li className="feature-box__list">
-                                Library - ReactJS, Redux, AngularJs, jQuery, Bootstrap, Axios(AJAX request)
+                                Library - ReactJS, Redux, AngularJS, jQuery, Bootstrap, Axios(AJAX request)
                             </li>
                         </ul>
                     </div>
@@ -63,7 +63,7 @@ export class About extends React.Component {
                                 Version Control Systems - Git, Github
                             </li>
                             <li className="feature-box__list">
-                                Cloud - AWS, Firebase, Heroku
+                                Cloud - Cloud9(AWS), Firebase, Heroku
                             </li>
                             <li className="feature-box__list">
                                 Other Languages - Java, Python

@@ -84,7 +84,7 @@ export class Work extends React.Component {
                             </div>
                         </div>
                         <div className="work-box__big-item">
-                            <a href="https://k-indie-blog.herokuapp.com/" target="_blank" rel="noopener noreferrer">
+                            <a href="https://kevin-cho.herokuapp.com/home" target="_blank" rel="noopener noreferrer">
                                 <img src={Portfolio1} alt="Porfolio" className="work-box__picture" />
                                 <h6 className="work-box__description--heading">Portfolio</h6>
                                 <p className="work-box__description--paragraph">ReactJS, SASS, Javascript canvas</p>
