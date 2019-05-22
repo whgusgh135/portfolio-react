@@ -140,11 +140,21 @@
             width: 28rem;
             padding: 1rem;
             padding-left: 10%;
-            color: $color-black;
+            color: $color-white;
             background-color: $color-white;
             display: none;
             -webkit-clip-path: polygon(0 0, 95% 0, 95% 43%, 100% 50%, 95% 57%, 95% 100%, 0 100%);
             clip-path: polygon(0 0, 95% 0, 95% 43%, 100% 50%, 95% 57%, 95% 100%, 0 100%);
+        
+            @include respond(tab-port) {
+                -webkit-clip-path: polygon(0% 0, 100% 0, 100% 100%, 0 100%);
+                clip-path: polygon(0% 0, 100% 0, 100% 100%, 0 100%);
+                border-left: none;
+                margin-top: 20rem;
+                width: 25rem;
+                top: 0;
+                left: 0;
+            }
         }
     }
 
