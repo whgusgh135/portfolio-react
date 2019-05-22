@@ -3,6 +3,7 @@ import React from "react";
 import KIndieBlog1 from "../styles/img/K-Indie-blog-1.png";
 import Stylofy1 from "../styles/img/Stylofy-1.png";
 import Portfolio1 from "../styles/img/Portfolio-1.png";
+import Roomie1 from "../styles/img/Roomie-1.png";
 
 import Code from "../styles/img/game-code.png";
 import Hack from "../styles/img/game-hack.png";
@@ -93,14 +94,37 @@ export class Work extends React.Component {
                             <h6 className="work-box__description-box-heading">Portfolio</h6>
                                 <p className="work-box__description-box-paragraph u-margin-bottom-tiny">A single page application for my portfolio.</p>
                                 <p className="work-box__description-box-paragraph">Tech used:</p>
+                                <p className="work-box__description-box-paragraph">Tech used:</p>
+                                <p className="work-box__description-box-paragraph">- ReactJS, Redux, SASS, Node, Express, MongoDb</p>
+                                <p className="work-box__description-box-paragraph">- mvc architectural pattern</p>
+                                <p className="work-box__description-box-paragraph">- RESTful APIs for CRUD operations</p>
+                                <p className="work-box__description-box-paragraph">- async API calls/ async redux using thunk</p>
+                                <p className="work-box__description-box-paragraph">- redux to control states.</p>
+                                <p className="work-box__description-box-paragraph">- secure auth using bcrypt and jsonwebtoken.</p>
+                                <p className="work-box__description-box-paragraph u-margin-bottom-tiny">- SASS 7-1 Pattern, BEM methodology</p>
+                                <p className="work-box__description-box-paragraph">Website features:</p>
+                                <p className="work-box__description-box-paragraph u-margin-bottom-small">- users can make a booking and check their bookings</p>
+                                <a href="https://github.com/whgusgh135/portfolio-react" target="_blank" rel="noopener noreferrer" className="btn btn-work-box">View Codes</a>
+                            </div>
+                        </div>
+                        <div className="work-box__big-item">
+                            <a href="https://roomie-react.herokuapp.com/home" target="_blank" rel="noopener noreferrer">
+                                <img src={Roomie1} alt="Roomie" className="work-box__picture" />
+                                <h6 className="work-box__description--heading">Roomie</h6>
+                                <p className="work-box__description--paragraph">ReactJS, Redux, SASS, Node, Express, RESTful APIs, MongoDb</p>
+                            </a>
+                            <div className="work-box__description-box--left">
+                            <h6 className="work-box__description-box-heading">Roomie</h6>
+                                <p className="work-box__description-box-paragraph u-margin-bottom-tiny">Web application to find roommates and flats</p>
+                                <p className="work-box__description-box-paragraph">Tech used:</p>
                                 <p className="work-box__description-box-paragraph">- React, SASS, Javascript canvas</p>
                                 <p className="work-box__description-box-paragraph">- Javascript canvas to make background animations</p>
                                 <p className="work-box__description-box-paragraph">- Simple API to send email</p>
                                 <p className="work-box__description-box-paragraph u-margin-bottom-small">- SASS 7-1 Pattern, BEM methodology</p>
                                 <p className="work-box__description-box-paragraph">Website features:</p>
-                                <p className="work-box__description-box-paragraph">- users can set color theme of the website.</p>
-                                <p className="work-box__description-box-paragraph u-margin-bottom-small">- users can change animations.</p>
-                                <a href="https://github.com/whgusgh135/portfolio-react" target="_blank" rel="noopener noreferrer" className="btn btn-work-box">View Codes</a>
+                                <p className="work-box__description-box-paragraph">- Users can find roommates or flats by category with search function.</p>
+                                <p className="work-box__description-box-paragraph u-margin-bottom-small">- users can message each other.</p>
+                                <a href="https://github.com/whgusgh135/roomie-frontend-react" target="_blank" rel="noopener noreferrer" className="btn btn-work-box">View Codes</a>
                             </div>
                         </div>
                     </div>  
